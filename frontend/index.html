@@ -1,80 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>My Portfolio</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      padding: 40px;
-    }
-
-    .container {
-      max-width: 600px;
-      background: #fff;
-      padding: 20px;
-      margin: auto;
-      border-radius: 8px;
-    }
-
-    input, textarea, button {
-      width: 100%;
-      margin: 10px 0;
-      padding: 10px;
-    }
-
-    button {
-      background: #007bff;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
-</head>
-
-<body>
-
-<div class="container">
-  <h1>My Portfolio</h1>
-  <p>Hi, I am Aman. This is my portfolio website.</p>
-
-  <h2>Contact Me</h2>
-
-  <form id="contactForm">
-    <input type="text" id="name" placeholder="Your Name" required />
-    <input type="email" id="email" placeholder="Your Email" required />
-    <textarea id="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send</button>
-  </form>
-
-  <p id="status"></p>
-</div>
-
-<script>
-  document.getElementById("contactForm").addEventListener("submit", async function(e) {
-    e.preventDefault();
-
-    const data = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      message: document.getElementById("message").value
-    };
-
-    const res = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
-
-    const result = await res.json();
-    document.getElementById("status").innerText = result.message;
-    this.reset();
-  });
-</script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
