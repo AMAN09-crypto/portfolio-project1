@@ -30,7 +30,6 @@ function Sidebar() {
 
       <div>
         <Link to="/" style={linkStyle}>Home</Link>
-        <Link to="/work" style={linkStyle}>Work</Link>
         <Link to="/education" style={linkStyle}>Education</Link>
         <Link to="/projects" style={linkStyle}>Projects</Link>
         <Link to="/coding" style={linkStyle}>Coding</Link>

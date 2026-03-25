@@ -20,65 +20,69 @@ function Coding() {
   return (
     <div
       style={{
-        padding: "70px 20px",
-        minHeight: "100vh",
-        background: "#f5f7fb",
+        minHeight: "calc(100vh - 64px)",
+        padding: "60px 20px",
+        background: "#ffffff",
       }}
     >
-      <h1 style={{ textAlign: "center", color: "#ff6b35", fontSize: "46px" }}>
-        Coding Profiles
-      </h1>
-
-      <p style={{ textAlign: "center", color: "#666", marginTop: "10px" }}>
-        Where you can find my coding work and progress
-      </p>
-
       <div
         style={{
-          marginTop: "40px",
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-          gap: "22px",
           maxWidth: "900px",
-          marginLeft: "auto",
-          marginRight: "auto",
+          margin: "0 auto",
         }}
       >
-        {profiles.map((p, i) => (
-          <div
-            key={i}
-            style={{
-              background: "white",
-              borderRadius: "14px",
-              padding: "26px",
-              textAlign: "center",
-              boxShadow: "0 10px 25px rgba(0,0,0,0.12)",
-            }}
-          >
-            <h2 style={{ color: "#ff6b35" }}>{p.name}</h2>
-            <p style={{ marginTop: "10px", color: "#444" }}>{p.desc}</p>
+        <h1 style={{ textAlign: "center", color: "#0c2b33", fontSize: "46px" }}>
+          Coding Profiles
+        </h1>
 
-            <a
-              href={p.link}
-              target="_blank"
-              rel="noreferrer"
+        <p style={{ textAlign: "center", color: "#666", marginTop: "10px", marginBottom: "40px" }}>
+          Where you can find my coding work and progress
+        </p>
+
+        <div
+          style={{
+            marginTop: "0px",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "22px",
+          }}
+        >
+          {profiles.map((p, i) => (
+            <div
+              key={i}
               style={{
-                display: "inline-block",
-                marginTop: "16px",
-                color: "#ff6b35",
-                fontWeight: "bold",
-                textDecoration: "none",
+                background: "#f8f9fa",
+                borderRadius: "8px",
+                padding: "26px",
+                textAlign: "center",
+                border: "1px solid #e0e0e0",
               }}
             >
-              Visit →
-            </a>
-          </div>
-        ))}
-      </div>
+              <h2 style={{ color: "#0c2b33" }}>{p.name}</h2>
+              <p style={{ marginTop: "10px", color: "#555" }}>{p.desc}</p>
 
-      <p style={{ textAlign: "center", marginTop: "60px", color: "#888" }}>
-        © 2026 Aman Kumar. All rights reserved.
-      </p>
+              <a
+                href={p.link}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  display: "inline-block",
+                  marginTop: "16px",
+                  color: "#0c2b33",
+                  fontWeight: "bold",
+                  textDecoration: "none",
+                }}
+              >
+                Visit →
+              </a>
+            </div>
+          ))}
+        </div>
+
+        <p style={{ textAlign: "center", marginTop: "60px", color: "#888" }}>
+          © 2026 Aman Kumar. All rights reserved.
+        </p>
+      </div>
     </div>
   );
 }

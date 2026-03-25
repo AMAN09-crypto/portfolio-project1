@@ -2,23 +2,27 @@ function About() {
   return (
     <div
       style={{
-        padding: "80px 20px",
-        minHeight: "100vh",
-        background: "#f5f7fb",
+        minHeight: "calc(100vh - 64px)",
+        padding: "60px 20px",
+        background: "#ffffff",
       }}
     >
-      <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-        <h1 style={{ textAlign: "center", fontSize: "48px", color: "#ff6b35" }}>
+      <div
+        style={{
+          maxWidth: "900px",
+          margin: "0 auto",
+        }}
+      >
+        <h1 style={{ textAlign: "center", fontSize: "48px", color: "#0c2b33" }}>
           About Me
         </h1>
 
         <div
           style={{
-            background: "white",
+            background: "#f8f9fa",
             marginTop: "40px",
             padding: "30px",
-            borderRadius: "16px",
-            boxShadow: "0 10px 25px rgba(0,0,0,0.10)",
+            borderRadius: "8px",
           }}
         >
           <p style={{ fontSize: "18px", lineHeight: "1.8", color: "#333" }}>

@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 
 import Home from "./pages/Home";
-import Work from "./pages/Work";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -14,10 +13,9 @@ function App() {
     <>
       <Sidebar />
 
-      <div style={{ marginTop: "80px", padding: "20px" }}>
+      <div style={{ marginTop: "64px", padding: "0", background: "#ffffff" }}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/work" element={<Work />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

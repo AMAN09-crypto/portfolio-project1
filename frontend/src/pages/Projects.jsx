@@ -23,13 +23,18 @@ function Projects() {
   return (
     <div
       style={{
-        padding: "80px 20px",
-        minHeight: "100vh",
-        background: "#f5f7fb",
+        minHeight: "calc(100vh - 64px)",
+        padding: "60px 20px",
+        background: "#ffffff",
       }}
     >
-      <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-        <h1 style={{ textAlign: "center", fontSize: "48px", marginBottom: "10px", color: "#ff6b35" }}>
+      <div
+        style={{
+          maxWidth: "900px",
+          margin: "0 auto",
+        }}
+      >
+        <h1 style={{ textAlign: "center", fontSize: "48px", marginBottom: "10px", color: "#0c2b33" }}>
           My Projects
         </h1>
 
@@ -48,19 +53,18 @@ function Projects() {
             <div
               key={i}
               style={{
-                background: "white",
-                borderRadius: "16px",
+                background: "#f8f9fa",
+                borderRadius: "8px",
                 padding: "22px",
-                boxShadow: "0 10px 25px rgba(0,0,0,0.10)",
-                border: "1px solid rgba(0,0,0,0.06)",
+                border: "1px solid #e0e0e0",
                 display: "flex",
                 flexDirection: "column",
                 gap: "14px",
               }}
             >
               <div>
-                <h2 style={{ margin: 0, color: "#111" }}>{p.title}</h2>
-                <p style={{ marginTop: "10px", color: "#444", lineHeight: "1.6" }}>
+                <h2 style={{ margin: 0, color: "#0c2b33" }}>{p.title}</h2>
+                <p style={{ marginTop: "10px", color: "#555", lineHeight: "1.6" }}>
                   {p.desc}
                 </p>
               </div>
@@ -72,8 +76,8 @@ function Projects() {
                     style={{
                       padding: "6px 10px",
                       borderRadius: "999px",
-                      background: "#fff3ee",
-                      color: "#ff6b35",
+                      background: "#e2e8f0",
+                      color: "#0c2b33",
                       fontWeight: 700,
                       fontSize: "12px",
                     }}
@@ -95,8 +99,8 @@ function Projects() {
                   justifyContent: "center",
                   gap: "8px",
                   padding: "10px 14px",
-                  borderRadius: "10px",
-                  background: "#ff6b35",
+                  borderRadius: "6px",
+                  background: "#0c2b33",
                   color: "white",
                   fontWeight: 800,
                   width: "fit-content",

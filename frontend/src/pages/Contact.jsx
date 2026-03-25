@@ -43,72 +43,45 @@ function Contact() {
   return (
     <div
       style={{
-        padding: "80px 20px",
-        minHeight: "100vh",
-        background: "#f5f7fb",
+        minHeight: "calc(100vh - 64px)",
+        padding: "60px 20px",
+        background: "#ffffff",
       }}
     >
-      <div style={{ maxWidth: "700px", margin: "0 auto" }}>
-        <h1 style={{ textAlign: "center", fontSize: "48px", color: "#ff6b35" }}>
-          Contact Me
-        </h1>
-
-        <div
-          style={{
-            background: "white",
-            padding: "30px",
-            borderRadius: "16px",
-            boxShadow: "0 10px 25px rgba(0,0,0,0.10)",
-            marginTop: "30px"
-          }}
-        >
-          <form onSubmit={handleSubmit}>
-            <input
-              name="name"
-              placeholder="Your Name"
-              value={form.name}
-              onChange={handleChange}
-              required
-              style={{ width: "100%", padding: "12px", marginBottom: "15px" }}
-            />
-
-            <input
-              name="email"
-              type="email"
-              placeholder="Your Email"
-              value={form.email}
-              onChange={handleChange}
-              required
-              style={{ width: "100%", padding: "12px", marginBottom: "15px" }}
-            />
-
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              value={form.message}
-              onChange={handleChange}
-              required
-              rows={5}
-              style={{ width: "100%", padding: "12px", marginBottom: "15px" }}
-            />
-
-            <button
-              type="submit"
-              style={{
-                background: "#ff6b35",
-                color: "white",
-                padding: "12px",
-                width: "100%",
-                border: "none",
-                borderRadius: "10px"
-              }}
-            >
-              Send Message
-            </button>
-          </form>
-
-          <p style={{ marginTop: "15px" }}>{status}</p>
-        </div>
+      <div
+        style={{
+          maxWidth: "900px",
+          margin: "0 auto",
+        }}
+      >
+        <h1 style={{ textAlign: "center", color: "#0c2b33", marginBottom: "40px" }}>Contact Me</h1>
+        <form onSubmit={handleSubmit} style={{ maxWidth: "600px", margin: "0 auto" }}>
+          <input
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            placeholder="Your Name"
+            style={{ width: "100%", padding: "12px", marginBottom: "15px", border: "1px solid #ddd", borderRadius: "4px", fontSize: "16px", boxSizing: "border-box" }}
+          />
+          <input
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            placeholder="Your Email"
+            style={{ width: "100%", padding: "12px", marginBottom: "15px", border: "1px solid #ddd", borderRadius: "4px", fontSize: "16px", boxSizing: "border-box" }}
+          />
+          <textarea
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            placeholder="Your Message"
+            style={{ width: "100%", padding: "12px", marginBottom: "15px", border: "1px solid #ddd", borderRadius: "4px", fontSize: "16px", boxSizing: "border-box", minHeight: "150px" }}
+          />
+          <button type="submit" style={{ width: "100%", padding: "12px", background: "#0c2b33", color: "white", border: "none", borderRadius: "4px", cursor: "pointer", fontSize: "16px" }}>Send</button>
+        </form>
+        {status && <p style={{ textAlign: "center", marginTop: "20px", fontSize: "16px" ,"color":"#000000"}}>{status}</p>}
       </div>
     </div>
   );
