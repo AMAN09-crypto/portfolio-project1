@@ -4,8 +4,7 @@
   "description": "Portfolio - Full Stack",
   "scripts": {
     "build": "cd frontend && npm install && npm run build",
-    "start": "cd backend && node server.js",
-    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+    "start": "cd backend && node server.js"
   },
   "license": "ISC"
 }
