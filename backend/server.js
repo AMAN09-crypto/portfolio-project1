@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const path = require("path");
 require("dotenv").config();
 
 const app = express();
@@ -8,11 +9,6 @@ const app = express();
 // Middlewares
 app.use(cors());
 app.use(express.json());
-
-// ✅ Simple test route
-app.get("/", (req, res) => {
-  res.send("Backend is running ✅");
-});
 
 // ✅ MongoDB connect
 const MONGO_URI =
@@ -23,7 +19,7 @@ mongoose
   .then(() => console.log("MongoDB connected ✅"))
   .catch((err) => console.log("Mongo error:", err));
 
-// ✅ Schema + Model (simple)
+// ✅ Schema + Model
 const contactSchema = new mongoose.Schema(
   {
     name: String,
@@ -54,6 +50,15 @@ app.post("/api/contact", async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: "Server error", error: err.message });
   }
+});
+
+// ✅ Serve React frontend build
+const frontendPath = path.join(__dirname, "../frontend/build");
+app.use(express.static(frontendPath));
+
+// ✅ Catch-all: send React's index.html for any non-API route
+app.get("*", (req, res) => {
+  res.sendFile(path.join(frontendPath, "index.html"));
 });
 
 // Start server
