@@ -1,5 +1,10 @@
 {
-  "dependencies": {
-    "react-router-dom": "^7.13.0"
-  }
+  "name": "portfolio-project1",
+  "version": "1.0.0",
+  "description": "Portfolio - Full Stack",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "start": "cd backend && node server.js"
+  },
+  "license": "ISC"
 }

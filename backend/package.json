@@ -1,10 +1,23 @@
 {
-  "name": "portfolio-project1",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "Portfolio - Full Stack",
+  "description": "Portfolio Backend",
+  "main": "server.js",
+  "type": "commonjs",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build",
-    "start": "cd backend && node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "license": "ISC"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.19.2",
+    "mongoose": "^9.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
 }
