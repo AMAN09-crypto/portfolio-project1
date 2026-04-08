@@ -54,7 +54,7 @@ function Contact() {
           margin: "0 auto",
         }}
       >
-        <h1 style={{ textAlign: "center", color: "#0c2b33", marginBottom: "40px" }}>Get in touch</h1>
+        <h1 style={{ textAlign: "center", color: "#0c2b33", marginBottom: "40px" }}>get in touch</h1>
         <form onSubmit={handleSubmit} style={{ maxWidth: "600px", margin: "0 auto" }}>
           <input
             type="text"
