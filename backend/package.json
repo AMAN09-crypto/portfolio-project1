@@ -1,7 +1,7 @@
 {
-  "name": "backend",
+  "name": "portfolio-backend",
   "version": "1.0.0",
-  "description": "Portfolio Backend",
+  "description": "Backend for portfolio project",
   "main": "server.js",
   "type": "commonjs",
   "scripts": {
@@ -9,16 +9,15 @@
     "dev": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Aman Kumar",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^16.6.1",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "mongodb": "^7.1.1",
-    "mongoose": "^9.2.1"
+    "mongoose": "^8.3.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "nodemon": "^3.1.0"
   }
 }
